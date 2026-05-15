@@ -95,4 +95,104 @@ Protocol: 4793122145117905827; 05:59:01 PM
   - The phishing email includes a malicious Trojan hidden as a PDF attachment.
 
 ### Final Verdict
-- **Classification:** Phishing 
+- **Classification:** Phishing
+
+## 2. Sample-1001.eml:
+
+<img width="1853" height="796" alt="image" src="https://github.com/user-attachments/assets/7b9f61f1-5770-4318-bd90-164e86b82217" />
+
+
+
+
+### Basic Information
+
+<img width="1667" height="493" alt="image" src="https://github.com/user-attachments/assets/093bdc20-8f68-4888-b7dc-c9c451859487" />
+
+- **Subject: Microsoft account unusual signin activity**  
+- **From: Microsoft account team, _<no-reply[@]access-accsecurity[.]com>**  
+- **Reply-To: solutionteamrecognizd02@gmail.com**  
+- **Date: Thu, 27 Jul 2023 07:40:03 +0000**  
+- **Return-Path: bounce@nonkfrgr.co.uk**
+
+### Header Analysis
+
+<img width="608" height="243" alt="image" src="https://github.com/user-attachments/assets/26295833-07ec-45dc-ba06-1003c3f51afa" />
+
+<img width="699" height="183" alt="image" src="https://github.com/user-attachments/assets/f2bd2c8e-2ad2-4fe7-8343-22a0b77e6273" />
+
+<img width="809" height="513" alt="image" src="https://github.com/user-attachments/assets/8b590e5b-ce5d-4bf5-a1d7-f6b04e914c65" />
+
+- SPF:
+  - Fail / None — `nonkfrgr[.]co[.]uk` does not designate permitted sender hosts.
+  - The sender IP address `89.144.9.87` was not authorized to send email on behalf of the domain.
+
+- DKIM:
+  - None — the message was not DKIM signed.
+  - No valid cryptographic signature was present to verify message authenticity.
+
+- DMARC:
+  - Permerror — DMARC validation failed due to authentication issues and domain misalignment.
+  - The email failed proper sender verification checks.
+
+- Received chain observations:
+  - The email passed through multiple Microsoft Outlook and Exchange protection servers.
+  - The originating sending server appears to be `nonkfrgr[.]co[.]uk`.
+  
+- Originating IP address:
+  - The originating IP address `89.144.9.87` appears to be from Germany and not from Microsoft.
+
+### Phishing Indicators
+
+- Suspicious sender domain:
+  - The sender domain `access-accsecurity[.]com` impersonates Microsoft but is not an official Microsoft domain.
+  - The originating server `nonkfrgr[.]co[.]uk` is suspicious and unrelated to legitimate Microsoft mail infrastructure.
+
+- Reply-To mismatch:
+  - The email directs replies to: `solutionteamrecognizd02[@]gmail[.]com`
+  - Legitimate :contentReference[oaicite:0]{index=0} security alerts would not use a free Gmail address for support or incident response.
+
+- Urgent or threatening language:
+  - The subject line: "Microsoft account unusual signin activity"
+    - attempts to create fear and urgency by implying unauthorized account access.
+  - The email pressures the victim into reacting quickly to supposed suspicious activity.
+
+- Suspicious attachment:
+  - The email contains unusually large embedded content and may include malicious HTML or credential-harvesting components.
+
+- Suspicious links:
+  - The HTML content includes a suspicious mailto link: `mailto:solutionteamrecognizd02[@]gmail[.]com`
+  - The message encourages victims to contact a non-Microsoft Gmail account.
+
+- Spoofed branding/company:
+  - The email impersonates Microsoft account security notifications using fake branding and unofficial domains.
+  - The HTML formatting attempts to mimic legitimate Microsoft security alert templates.
+
+- Grammar or spelling issues:
+  - The phrase: `Unusual sign.in activity`
+    - contains improper punctuation and formatting.
+  - The Reply-To address contains the misspelled word: `recognizd`
+  - Legitimate Microsoft notifications are typically professionally written and free of these errors.
+
+### URLs
+
+### Attachments
+- There are no attachments
+
+### IOC (Indicators of Compromise)
+- Domains:
+- IP Addresses:
+- Hashes:
+- Email Addresses:
+
+### Social Engineering Techniques
+- Urgency
+- Fear
+- Authority impersonation
+- Financial lure
+- Account verification scam
+- Attachment-based malware
+- Credential harvesting
+
+### Final Verdict
+- **Classification:** Phishing / Spam / Malicious
+
