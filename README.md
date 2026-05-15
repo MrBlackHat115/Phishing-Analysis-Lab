@@ -33,5 +33,5 @@ To complete this phishing analysis lab, you will need:
 - Use a safe environment (VM or sandbox) when analyzing emails
 
 ## Additional labs:
-- LetsDefend Email analysis: https://app.letsdefend.io/challenge/email-analysis
+- LetsDefend Email Analysis: https://app.letsdefend.io/challenge/email-analysis
 - LetsDefend Phishing Email: https://app.letsdefend.io/challenge/phishing-email
