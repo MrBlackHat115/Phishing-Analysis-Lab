@@ -4,7 +4,7 @@
 
 <img width="1850" height="806" alt="Screenshot 2026-05-15 113804" src="https://github.com/user-attachments/assets/14c94f69-7261-4675-9e17-cc62f0e4fa04" />
 
-###Translation:
+### Translation:
 
 [BB] - Your balance has been released - Code: 11084339647130851921
 
