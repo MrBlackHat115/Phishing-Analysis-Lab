@@ -9,6 +9,7 @@
 [BB] - Your balance has been released - Code: 11084339647130851921
 
 From: prestonconstance587[@]gmail[.]com
+
 To: phishing@pot
 
 IRPF Release - 6NwlyfzWcsNerv0
