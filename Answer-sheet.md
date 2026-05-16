@@ -101,9 +101,6 @@ Protocol: 4793122145117905827; 05:59:01 PM
 
 <img width="1853" height="796" alt="image" src="https://github.com/user-attachments/assets/7b9f61f1-5770-4318-bd90-164e86b82217" />
 
-
-
-
 ### Basic Information
 
 <img width="1667" height="493" alt="image" src="https://github.com/user-attachments/assets/093bdc20-8f68-4888-b7dc-c9c451859487" />
@@ -149,7 +146,7 @@ Protocol: 4793122145117905827; 05:59:01 PM
 
 - Reply-To mismatch:
   - The email directs replies to: `solutionteamrecognizd02[@]gmail[.]com`
-  - Legitimate :contentReference[oaicite:0]{index=0} security alerts would not use a free Gmail address for support or incident response.
+  - Microsoft security alerts would not use a free Gmail address for support or incident response.
 
 - Urgent or threatening language:
   - The subject line: "Microsoft account unusual signin activity"
@@ -175,24 +172,61 @@ Protocol: 4793122145117905827; 05:59:01 PM
 
 ### URLs
 
+<img width="1022" height="233" alt="image" src="https://github.com/user-attachments/assets/ea8bfb47-c63c-4657-afd4-b4418141f353" />
+
+<img width="925" height="285" alt="image" src="https://github.com/user-attachments/assets/4215d7bc-d0df-470d-8403-4854ad1dcd8e" />
+
+
+- The email contains a “Report User” button; however, instead of redirecting users to a legitimate :contentReference[oaicite:0]{index=0} support page, it uses a suspicious `mailto:` link directed to:
+  `solutionteamrecognizd02[@]gmail.com`
+- This strongly suggests phishing activity. The domain or infrastructure associated with the campaign has likely already been reported and taken down.
+
+
+- We used a tool called `eico.py` to extract artifacts and indicators from the email. During analysis, we identified a suspicious URL embedded within the message:
+  `http://thebandalisty[.]com/track/o39473XgziG18708448HxBA1821750yoR33736gMed176`
+  -  After scanning the URL with security analysis tools, it was identified as malicious.
+- We also attempted to perform dynamic analysis using Hybrid Analysis. However, the phishing domain and associated infrastructure appeared to have already been taken offline, which is common with older phishing campaigns.
+
+- 
 ### Attachments
 - There are no attachments
 
 ### IOC (Indicators of Compromise)
 - Domains:
+  - access-accsecurity[.]com
+  - nonkfrgr[.]co[.]uk
+  - thebandalisty[.]com
+
 - IP Addresses:
-- Hashes:
+  - 89.144.9.87
+
+- URLs:
+  - http://thebandalisty[.]com/track/o39473XgziG18708448HxBA1821750yoR33736gMed176
+
 - Email Addresses:
+  - no-reply[@]access-accsecurity[.]com
+  - solutionteamrecognizd02[@]gmail[.]com
 
 ### Social Engineering Techniques
-- Urgency
-- Fear
-- Authority impersonation
-- Financial lure
-- Account verification scam
-- Attachment-based malware
-- Credential harvesting
+- Urgency:
+  - The email attempts to pressure the victim into taking immediate action by claiming there was unusual sign-in activity on their Microsoft account.
+
+- Fear:
+  - The message creates fear by suggesting the account may have been compromised or accessed without authorization.
+
+- Authority impersonation:
+  - The email contains a “Report User” button; however, instead of redirecting users to a legitimate Microsoft support page, it uses a suspicious `mailto:` link directed to:
+  `solutionteamrecognizd02[@]gmail[.]com`
+
+- Account security scare tactics:
+  - The email uses security-related language and fake account alerts to manipulate the victim into responding quickly without carefully verifying the message.
+
+- Credential harvesting:
+  - The phishing email likely attempts to trick users into providing account credentials or sensitive information through malicious links or attacker-controlled communication channels.
+
+- Brand impersonation:
+  - The email copies Microsoft branding, formatting, and account security messaging to make the phishing campaign appear authentic.
 
 ### Final Verdict
-- **Classification:** Phishing / Spam / Malicious
+- **Classification:** Phishing 
 
