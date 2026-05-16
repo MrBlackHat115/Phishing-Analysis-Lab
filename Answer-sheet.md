@@ -50,7 +50,7 @@ Protocol: 4793122145117905827; 05:59:01 PM
 
   <img width="360" height="73" alt="image" src="https://github.com/user-attachments/assets/868a8189-83a7-4b25-bf0e-4397d69cc75a" />
 
-  -   The email contains a suspicious PDF attachment named `csWuYjyqO2IR.pdf`.
+  - The email contains a suspicious PDF attachment named `csWuYjyqO2IR.pdf`.
 
 - Grammar or spelling issues:
 
@@ -59,9 +59,10 @@ Protocol: 4793122145117905827; 05:59:01 PM
   - The email contains a spelling error: “créito” instead of “crédito.”
   - Minor grammatical inconsistencies suggest the message may not have been professionally written.
 
-### URLs
+### URL Analysis
 - The email has no URLs.
-### Attachments
+
+### Attachments Analysi
 <img width="978" height="37" alt="image" src="https://github.com/user-attachments/assets/d35256b2-5ac7-49ca-bab9-4b2db0635545" />
 
 <img width="954" height="746" alt="image" src="https://github.com/user-attachments/assets/d09f8f6f-f822-4251-9500-481d74e40c69" />
@@ -172,7 +173,7 @@ Protocol: 4793122145117905827; 05:59:01 PM
   - The Reply-To address contains the misspelled word: `recognizd`
   - Legitimate Microsoft notifications are typically professionally written and free of these errors.
 
-### URLs
+### URL Analysis
 
 <img width="1022" height="233" alt="image" src="https://github.com/user-attachments/assets/ea8bfb47-c63c-4657-afd4-b4418141f353" />
 
@@ -189,8 +190,7 @@ Protocol: 4793122145117905827; 05:59:01 PM
   -  After scanning the URL with security analysis tools, it was identified as malicious.
 - We also attempted to perform dynamic analysis using Hybrid Analysis. However, the phishing domain and associated infrastructure appeared to have already been taken offline, which is common with older phishing campaigns.
 
-- 
-### Attachments
+### Attachment Analysis
 - There are no attachments
 
 ### IOC (Indicators of Compromise)
@@ -232,3 +232,162 @@ Protocol: 4793122145117905827; 05:59:01 PM
 ### Final Verdict
 - **Classification:** Phishing 
 
+## 3. Sample-1006.eml:
+
+<img width="658" height="465" alt="image" src="https://github.com/user-attachments/assets/6dc633ca-1c7b-4e82-a7f5-76340243181f" />
+
+### Basic Information
+
+<img width="1038" height="554" alt="image" src="https://github.com/user-attachments/assets/4ae3227b-2cb3-48c5-beb4-37b79e19521c" />
+
+- **Subject: Attention:I am Diplomatic agent Mr.Wood Forest**  
+- **From: Mr.Wood Forest**  
+- **Reply-To: mywoodforestbiz[.]7[@]gmail[.]com**  
+- **Date: Sat, 29 Jul 2023 13:03:39 -0700**  
+- **Return-Path: nemani[.]tukunia@postfiji[.]com[.]fj**
+
+### Header Analysis
+
+<img width="561" height="69" alt="image" src="https://github.com/user-attachments/assets/e6f25abe-0523-4cd6-84ee-27bd41fe34aa" />
+
+<img width="782" height="630" alt="image" src="https://github.com/user-attachments/assets/05e694cb-3ac4-49fe-8590-bb7908c4b2ab" />
+
+<img width="791" height="629" alt="image" src="https://github.com/user-attachments/assets/d24f0caa-4280-4702-86f9-4c0975e01000" />
+
+- SPF: Fail — postfiji[.]com[.]fj did not authorize 109.202.24.52 to send email on its behalf.
+- DKIM: None — the message was not digitally signed, so the sender’s identity could not be verified.
+- DMARC: None — no DMARC validation/alignment was present for the domain.
+- Received chain observations:
+  - Email originated from 85.208.139.60
+  - Relayed through 54upr[.]rosreestr[.]ru (109.202.24.52)
+  - Claimed sender domain was postfiji[.]com[.]fj
+  - Reply-To redirected to mywoodforestbiz[.]7[@]gmail[.]com
+  - Passed through legitimate Microsoft Outlook/Office365 mail servers afterward
+  - Multiple spoofing indicators suggest phishing/scam activity
+  - Russian relay server and mismatched Fiji sender domain are suspicious
+- Originating IP address: 85.208.139.60
+
+### Phishing Indicators
+
+- Suspicious sender identity
+  - The sender claims to be **"Diplomatic agent Mr.Wood Forest"** and also an **"IMF AGENT"**.
+  - These titles are not verifiable and are inconsistent with real diplomatic or IMF communication procedures.
+  - The use of a personal Gmail address (`mywoodforestbiz[.]7[@]gmail[.]com`) is not legitimate for any official organization.
+
+- Fraudulent financial claim
+  - The email claims:
+    - “consignment box of funds sum of $10.5 million USD”
+  - This is a hallmark of an **advance-fee scam**
+  - Legitimate financial institutions do not deliver cash via personal consignment or airport pickup.
+
+- Urgency and pressure tactics
+  - Phrases such as:
+    - “Please hurry up”
+    - “I do not want to deliver to a wrong destination”
+  - These are designed to force quick action without verification.
+  - This is a common **social engineering technique**.
+
+- Suspicious contact method
+  - Contact Email: `mywoodforestbiz[.]7[@]gmail[.]com`
+  - Legitimate government, IMF, or diplomatic entities do not use Gmail for official transactions or fund delivery coordination.
+
+- Personal information harvesting (PII theft attempt)
+  - The email requests:
+    - home address
+    - current cell phone number
+  - This is an attempt to collect **sensitive personal data** for fraud or further targeting.
+
+- Implausible scenario
+  - The claim of being at an airport with millions in cash is unrealistic.
+  - International financial transfers do not occur through physical cash delivery at airports.
+
+- Authority impersonation
+  - Uses fake authority figures:
+    - “Diplomatic agent”
+    - “IMF AGENT”
+  - These are used to create false trust and legitimacy.
+
+- Lack of professionalism and structure
+  - Informal writing style
+  - Grammar inconsistencies
+  - Lack of official formatting or domain usage
+  - Legitimate international communications follow strict formal standards
+
+- Advance-fee scam pattern
+  - The message follows a known scam pattern:
+    - Promise of large sum of money
+    - Request for personal details
+    - Implicit future fraud steps (fees, clearance, etc.)
+
+- No official infrastructure
+  - No government domain
+  - No IMF domain
+  - No verified organizational email system
+  - All communication routed through a single Gmail account controlled by
+ 
+### URL Analysis
+- No URLs
+
+### Attachment Analysis
+- No Attachments
+
+### IOC (Indicators of Compromise)
+- Domains:
+  - 54upr.rosreestr.ru
+
+- IP Addresses:
+  - 109.202.24.52
+  - 85.208.139.60
+
+- URLs:
+  - None
+
+- Attachments:
+  - None 
+
+- Email Addresses:
+  - mywoodforestbiz[.]7[@]gmail[.]com
+  - nemani[.]tukunia@postfiji[.]com[.]fj
+ 
+### Social Engineering Techniques
+
+- Authority impersonation:
+  - The sender claims to be a “Diplomatic agent” and “IMF AGENT.”
+  - This is used to create false legitimacy and pressure the victim into compliance.
+
+- Fake financial reward (advance-fee scam):
+  - The message promises “$10.5 million USD” in a consignment box.
+  - This is designed to lure victims with unrealistic financial gain.
+
+- Urgency and time pressure:
+  - Phrases like “Please hurry up” and “I am at the airport right now” are used.
+  - This discourages critical thinking and pushes immediate action.
+
+- Fear of loss/mistake framing:
+  - “I do not want to deliver to the wrong destination area.”
+  - This creates anxiety that the victim might miss out or cause an error.
+
+- Information harvesting (data extraction):
+  - Requests for:
+    - home address
+    - current cell phone number
+  - This is used to collect personally identifiable information (PII) for fraud.
+
+- Direct contact manipulation:
+  - Forces communication through a personal Gmail account (`mywoodforestbiz.7@gmail.com`).
+  - Bypasses official channels to maintain control over the victim interaction.
+
+- False sense of exclusivity:
+  - The message implies the recipient is the intended beneficiary of a special delivery.
+  - This increases trust and reduces skepticism.
+
+- Urgent physical presence claim:
+  - “I have just arrived… at the airport right now.”
+  - Creates perceived immediacy and realism to pressure a quick response.
+
+- Trust exploitation through official-sounding terms:
+  - Uses terms like “consignment box,” “funds,” and “delivery.”
+  - Mimics legitimate financial/legal processes to appear credible.
+
+### Final Verdict
+- **Classification:** Phishing 
