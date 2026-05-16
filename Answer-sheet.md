@@ -259,7 +259,7 @@ Protocol: 4793122145117905827; 05:59:01 PM
 - DMARC: None — no DMARC validation/alignment was present for the domain.
 - Received chain observations:
   - Email originated from 85.208.139.60
-  - Relayed through 54upr[.]rosreestr[.]ru (109.202.24.52)
+  - Relayed through 54upr[.]rosreestr[.]ru (85.208.139.60)
   - Claimed sender domain was postfiji[.]com[.]fj
   - Reply-To redirected to mywoodforestbiz[.]7[@]gmail[.]com
   - Passed through legitimate Microsoft Outlook/Office365 mail servers afterward
