@@ -391,3 +391,58 @@ Protocol: 4793122145117905827; 05:59:01 PM
 
 ### Final Verdict
 - **Classification:** Phishing 
+
+## 4. Sample-1007.eml:
+
+<img width="1277" height="773" alt="image" src="https://github.com/user-attachments/assets/241ad198-2a75-434a-ae43-f2170fdacabc" />
+
+<img width="582" height="288" alt="image" src="https://github.com/user-attachments/assets/bbdadf54-1d4d-45fb-8d32-fa8d55c19476" />
+
+### Basic Information
+
+<img width="732" height="263" alt="image" src="https://github.com/user-attachments/assets/30a016a1-7c0e-4c12-bee5-e9efb3f10bca" />
+
+- **Subject: [Binance] Withdraw Successful - 2023-07-30 51:51:51(UTC)**  
+- **From: Binance <noreply-supportbinancewallet[.]irs[@]auswestbc[.]com[.]au>**  
+- **Reply-To: None**  
+- **Date: Sun, 30 Jul 2023 23:57:35 +0000**  
+- **Return-Path: 01070189a93c67a5-2d72e19a-1525-41c6-92cb-347e9e7f27a5-000000[@]eu-central-1[.]amazonses[.]com**
+
+### Header Analysis
+
+- SPF: Pass — sender IP `69.169.224.12` was authorized to send mail for `eu-central-1.amazonses.com`.
+- DKIM: Pass — the message contained a valid DKIM signature verified for `amazonses.com`.
+- DMARC: None — no DMARC enforcement/alignment was present for the `auswestbc.com.au` domain.
+- Received chain observations:
+  - Email was sent through Amazon Simple Email Service (Amazon SES)
+  - Sending server:
+    - `b224-12.smtp-out.eu-central-1.amazonses.com`
+    - IP: `69.169.224.12`
+- Message passed through legitimate Microsoft Outlook / Office365 infrastructure afterward
+- Originating IP address: 69.169.224.12
+
+### Phishing Indicators
+
+ 
+### URL Analysis
+
+
+### Attachment Analysis
+
+
+### IOC (Indicators of Compromise)
+- Domains:
+  
+- IP Addresses:
+
+- URLs:
+
+- Attachments:
+
+- Email Addresses:
+ 
+### Social Engineering Techniques
+
+
+### Final Verdict
+- **Classification:** Phishing 
