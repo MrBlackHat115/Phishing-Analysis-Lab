@@ -110,9 +110,9 @@ Protocol: 4793122145117905827; 05:59:01 PM
 
 - **Subject: Microsoft account unusual signin activity**  
 - **From: Microsoft account team, _<no-reply[@]access-accsecurity[.]com>**  
-- **Reply-To: solutionteamrecognizd02@gmail.com**  
+- **Reply-To: solutionteamrecognizd02[@]gmail[.]com**  
 - **Date: Thu, 27 Jul 2023 07:40:03 +0000**  
-- **Return-Path: bounce@nonkfrgr.co.uk**
+- **Return-Path: bounce[@]nonkfrgr[.]co[.]uk**
 
 ### Header Analysis
 
