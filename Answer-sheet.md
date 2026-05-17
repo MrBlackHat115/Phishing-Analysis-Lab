@@ -180,7 +180,7 @@ Protocol: 4793122145117905827; 05:59:01 PM
 <img width="925" height="285" alt="image" src="https://github.com/user-attachments/assets/4215d7bc-d0df-470d-8403-4854ad1dcd8e" />
 
 
-- The email contains a “Report User” button; however, instead of redirecting users to a legitimate :contentReference[oaicite:0]{index=0} support page, it uses a suspicious `mailto:` link directed to:
+- The email contains a “Report User” button; however, instead of redirecting users to a legitimate support page, it uses a suspicious `mailto:` link directed to:
   `solutionteamrecognizd02[@]gmail.com`
 - This strongly suggests phishing activity. The domain or infrastructure associated with the campaign has likely already been reported and taken down.
 
