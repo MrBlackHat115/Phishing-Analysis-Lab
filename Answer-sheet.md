@@ -347,7 +347,7 @@ Protocol: 4793122145117905827; 05:59:01 PM
 
 - Email Addresses:
   - mywoodforestbiz[.]7[@]gmail[.]com
-  - nemani[.]tukunia@postfiji[.]com[.]fj
+  - nemani[.]tukunia[@]postfiji[.]com[.]fj
  
 ### Social Engineering Techniques
 
