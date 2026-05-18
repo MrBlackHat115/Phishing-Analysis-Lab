@@ -500,7 +500,6 @@ Protocol: 4793122145117905827; 05:59:01 PM
   - `01070189a93c67a5-2d72e19a-1525-41c6-92cb-347e9e7f27a5-000000[@]eu-central-1[.]amazonses[.]com`
  
 ### Social Engineering Techniques
-
 - Brand impersonation:
   - The email impersonates Binance by using its name and “withdrawal successful” branding.
   - This is designed to exploit trust in a well-known cryptocurrency platform.
@@ -589,14 +588,13 @@ Protocol: 4793122145117905827; 05:59:01 PM
 <img width="1324" height="545" alt="image" src="https://github.com/user-attachments/assets/d252c39f-40df-41c0-acb9-7e54652b518d" />
 
 - After decoding the Base64-encoded content, multiple URLs were discovered within the email body.
-- The URLs associated with the “Cancel transaction” buttons were identified as malicious during VirusTotal analysis.
+- The URLs associated with the “Secure My Account” buttons were identified as malicious during VirusTotal analysis.
 - These links likely redirect victims to phishing or credential-harvesting websites.
 
 ### Attachment Analysis
 - None
 
 ### Phishing Indicators
-
 - Domains
   - shangriladogchew[.]com
   - hotmail[.]com
@@ -616,7 +614,6 @@ Protocol: 4793122145117905827; 05:59:01 PM
   - noreply-coinbasewalletverifying[.]irs[.]mantab[@]shangriladogchew[.]com
 
 ### Social Engineering Techniques
-
 - Brand impersonation
   - Pretends to be from Coinbase
 - Urgency / Fear tactics
