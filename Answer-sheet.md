@@ -333,7 +333,7 @@ Protocol: 4793122145117905827; 05:59:01 PM
 
 ### IOC (Indicators of Compromise)
 - Domains:
-  - 54upr.rosreestr.ru
+  - 54upr[.]rosreestr[.]ru
 
 - IP Addresses:
   - 109.202.24.52
@@ -421,28 +421,212 @@ Protocol: 4793122145117905827; 05:59:01 PM
 - Message passed through legitimate Microsoft Outlook / Office365 infrastructure afterward
 - Originating IP address: 69.169.224.12
 
-### Phishing Indicators
+### Content Analysis
 
+<img width="683" height="601" alt="image" src="https://github.com/user-attachments/assets/c56d96eb-9176-4117-9aea-0df716a03cc8" />
+
+<img width="1155" height="431" alt="image" src="https://github.com/user-attachments/assets/f8120ded-ebe8-48f2-8c04-a8368481ff5b" />
+
+- The email body was encoded using Base64.
+- Encoding may be used to obfuscate malicious HTML content and evade basic email security filtering.
  
 ### URL Analysis
 
+<img width="1155" height="431" alt="image" src="https://github.com/user-attachments/assets/f8120ded-ebe8-48f2-8c04-a8368481ff5b" />
+
+<img width="1856" height="543" alt="image" src="https://github.com/user-attachments/assets/703c15a1-ade7-4a0f-a03a-8b67553d9759" />
+
+- After decoding the Base64-encoded content, multiple URLs were discovered within the email body.
+- The URLs associated with the “Cancel transaction” buttons were identified as malicious during VirusTotal analysis.
+- These links likely redirect victims to phishing or credential-harvesting websites.
 
 ### Attachment Analysis
+- No Attachments
+
+### Phishing Indicators
+- Suspicious sender domain:
+  - The email claims to originate from Binance, but the sender address uses:
+    - `auswestbc.com.au`
+  - This domain is unrelated to legitimate Binance infrastructure.
+  - Legitimate Binance notifications are typically sent from official Binance-owned domains.
+
+- Brand impersonation:
+  - The sender display name is:
+    - `Binance`
+  - The email attempts to impersonate the Binance cryptocurrency platform to gain the recipient’s trust.
+
+- Fraudulent transaction alert:
+  - Subject:
+    - `[Binance] Withdraw Successful`
+  - The message attempts to create panic by suggesting an unauthorized cryptocurrency withdrawal occurred.
+ 
+ - Binance branding does not align with:
+    - `auswestbc.com.au`
+    - `amazonses.com`
+  - This mismatch between branding and infrastructure is a strong phishing indicator.
+
+- Abuse of legitimate email services:
+  - The email was delivered using Amazon SES (`amazonses.com`).
+  - Attackers frequently abuse legitimate cloud email platforms to improve deliverability and bypass spam filters.
+
+- Lack of DMARC enforcement:
+  - DMARC: None
+  - The absence of DMARC protection increases the risk of successful domain impersonation attacks.
+ 
+- Cryptocurrency-focused targeting:
+  - Cryptocurrency-related phishing campaigns are common because transactions are difficult or impossible to reverse.
+  - Attackers exploit fear of financial loss to manipulate victims into revealing credentials.
 
 
 ### IOC (Indicators of Compromise)
 - Domains:
-  
+  - `auswestbc[.]com[.]au`
+  - `eu-central-1[.]amazonses[.]com`
+  - `amazonses[.]com`
+
 - IP Addresses:
+  - `69.169.224.12` (Amazon SES outbound mail server)
 
 - URLs:
+  - Malicious URL embedded in “Cancel transaction” buttons
+  - Additional obfuscated URLs extracted from Base64-decoded HTML content
+  - URLs flagged as malicious by VirusTotal analysis
 
 - Attachments:
+  - None
 
 - Email Addresses:
+  - `noreply-supportbinancewallet[.]irs[@]auswestbc[.]com[.]au`
+  - `01070189a93c67a5-2d72e19a-1525-41c6-92cb-347e9e7f27a5-000000[@]eu-central-1[.]amazonses[.]com`
  
 ### Social Engineering Techniques
 
+- Brand impersonation:
+  - The email impersonates Binance by using its name and “withdrawal successful” branding.
+  - This is designed to exploit trust in a well-known cryptocurrency platform.
+
+- Fear and urgency:
+  - The subject line implies an unexpected withdrawal has occurred.
+  - The message encourages immediate action to “cancel” the transaction.
+
+- Fake transaction alert:
+  - Claims a financial event (withdrawal) that may not have occurred.
+  - Used to trigger panic and impulsive clicking behavior.
+
+- Call-to-action manipulation:
+  - “Cancel transaction” buttons are prominently presented.
+  - These links are likely malicious and lead to phishing pages.
+
+- Credential harvesting lure:
+  - The malicious links are designed to redirect users to fake login pages.
+  - Goal is to steal account credentials or financial information.
+
+- Obfuscation of content:
+  - Email body is encoded using Base64.
+  - This hides malicious HTML and helps bypass basic email filters.
+
+- Trust exploitation via legitimate infrastructure:
+  - The email is sent through Amazon SES (`amazonses.com`).
+  - Attackers abuse trusted cloud services to appear legitimate and bypass spam detection.
+
+- Financial targeting:
+  - The email specifically targets cryptocurrency users.
+  - Crypto-related scams exploit the irreversible nature of transactions.
 
 ### Final Verdict
-- **Classification:** Phishing 
+- **Classification:** Phishing
+
+## 5. Sample-1015.eml:
+
+<img width="1174" height="788" alt="image" src="https://github.com/user-attachments/assets/44bdfcdb-7025-46b3-a4ff-62fac7250def" />
+
+### Basic Information
+
+<img width="794" height="445" alt="image" src="https://github.com/user-attachments/assets/ffc034ce-03bc-4235-9c88-686ca1bfbf41" />
+
+- **Subject: Important: You phone number has been changed - Case# 83899065**  
+- **From: C o i n b a s e <noreply-coinbasewalletverifiying[.]irs[.]mantab[@]shangriladogchew[.]com>**  
+- **Reply-To: None**  
+- **Date: Fri, 28 Jul 2023 21:25:06 +0000**  
+- **Return-Path: 010b01899e641610-7339abbc-6cab-4df3-8f67-9a50ec1f5fd1-000000@eu-west-2.amazonses.com**
+
+### Header Analysis
+
+<img width="516" height="214" alt="image" src="https://github.com/user-attachments/assets/7edccf57-76dd-446c-baee-9dd43387de7a" />
+
+- SPF: Pass — sender IP `23.249.218.14` was authorized to send mail for `eu-west-2.amazonses.com`.
+- DKIM: Pass — the message contained a valid DKIM signature verified for `amazonses.com`.
+- DMARC: None — no DMARC enforcement or alignment was present for the sender domain `shangriladogchew.com`.
+- Received chain observations:
+  - Email was sent through Amazon Simple Email Service (Amazon SES)
+  - Sending server:
+    - `d218-14.smtp-out.eu-west-2.amazonses.com`
+    - IP: `23.249.218.14`
+  - Message passed through legitimate Microsoft Outlook / Office365 infrastructure afterward
+  - Sender display name impersonated Coinbase:
+    - `C o i n b a s e`
+  - Sender email used unrelated domain:
+    - `shangriladogchew.com`
+  - Subject attempted to create urgency:
+    - `Important: You phone number has been changed`
+  - Email content was Base64 encoded
+  - X-Mailer revealed use of:
+    - `PHPMailer 6.1.5`
+  - No evidence of direct SMTP spoofing because SPF and DKIM both passed
+  - Indicates likely abuse of legitimate Amazon SES infrastructure for phishing delivery
+- Originating IP address:
+  - `23.249.218.14`
+
+### Content Analysis
+
+<img width="658" height="539" alt="image" src="https://github.com/user-attachments/assets/84c46b5b-e049-44b5-9588-70df95b87cc7" />
+
+- The email body was encoded using Base64.
+- Encoding may be used to obfuscate malicious HTML content and evade basic email security filtering.
+ 
+### URL Analysis
+
+<img width="1324" height="545" alt="image" src="https://github.com/user-attachments/assets/d252c39f-40df-41c0-acb9-7e54652b518d" />
+
+- After decoding the Base64-encoded content, multiple URLs were discovered within the email body.
+- The URLs associated with the “Cancel transaction” buttons were identified as malicious during VirusTotal analysis.
+- These links likely redirect victims to phishing or credential-harvesting websites.
+
+### Attachment Analysis
+- None
+
+### Phishing Indicators
+
+- Domains
+  - shangriladogchew[.]com
+  - hotmail[.]com
+
+- IP Addresses
+  - 2a02:a46c:8737:1:3575:d276:ac9c:7167
+  - 23.249.218.14 (sender IP)
+
+- URLs
+  - hxxps[://]amedyna[.]com/
+    - “Secure My Account” button likely redirects to a phishing site (URL not visible in screenshot)
+
+- Attachments
+  - None visible in the screenshot
+
+- Email Addresses
+  - noreply-coinbasewalletverifying[.]irs[.]mantab[@]shangriladogchew[.]com
+
+### Social Engineering Techniques
+
+- Brand impersonation
+  - Pretends to be from Coinbase
+- Urgency / Fear tactics
+  - Claims the phone number was changed and suspicious activity occurred
+- Account security scare
+  - Threatens restricted withdrawals to pressure action
+  - “Secure My Account” button pressures immediate action
+- Authority impersonation
+  - Uses Coinbase branding and technical language to appear legitimate
+
+### Final Verdict
+- **Classification:** Phishing
+
