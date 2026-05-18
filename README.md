@@ -9,6 +9,9 @@ This repository contains **5 downloadable phishing email samples** for phishing 
 - Samples:
   - Sample-1000: https://github.com/rf-peixoto/phishing_pot/blob/main/email/sample-1000.eml
   - Sample-1001: https://github.com/rf-peixoto/phishing_pot/blob/main/email/sample-1001.eml
+  - Sample-1006: https://github.com/rf-peixoto/phishing_pot/blob/main/email/sample-1006.eml
+  - Sample-1007: https://github.com/rf-peixoto/phishing_pot/blob/main/email/sample-1007.eml
+  - Sample-1015: https://github.com/rf-peixoto/phishing_pot/blob/main/email/sample-1015.eml
 
 ⚠️ Please be extremely careful when opening or analyzing these files. Some attachments or embedded links may be malicious.
 
@@ -48,5 +51,5 @@ To complete this phishing analysis lab, you will need:
 - Use a safe environment (VM or sandbox) when analyzing emails
 
 ## Additional labs:
-- LetsDefend Email Analysis: https://app.letsdefend.io/challenge/email-analysis
-- LetsDefend Phishing Email: https://app.letsdefend.io/challenge/phishing-email
+- **LetsDefend Email Analysis**: https://app.letsdefend.io/challenge/email-analysis
+- **LetsDefend Phishing Email**: https://app.letsdefend.io/challenge/phishing-email
