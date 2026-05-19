@@ -588,7 +588,7 @@ Protocol: 4793122145117905827; 05:59:01 PM
 <img width="1324" height="545" alt="image" src="https://github.com/user-attachments/assets/d252c39f-40df-41c0-acb9-7e54652b518d" />
 
 - After decoding the Base64-encoded content, multiple URLs were discovered within the email body.
-- The URLs associated with the “Secure My Account” buttons were identified as malicious during VirusTotal analysis.
+- The URLs associated with the “Secure My Account” button were identified as malicious during VirusTotal analysis.
 - These links likely redirect victims to phishing or credential-harvesting websites.
 
 ### Attachment Analysis
