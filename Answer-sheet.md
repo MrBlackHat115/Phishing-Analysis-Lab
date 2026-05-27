@@ -44,8 +44,10 @@ Protocol: 4793122145117905827; 05:59:01 PM
 
 ### Phishing Indicators
 - Suspicious sender domain:
-  - The email appears to originate from the hostname "a3.domain," which is unusually generic and does not resemble a legitimate banking or corporate mail server.
-  - The sender used Gmail.com infrastructure while impersonating a financial-related notification, which is suspicious behavior commonly seen in phishing campaigns.
+  - The email appears to originate from the hostname "a3.domain," which is unusually generic and does not resemble a
+    legitimate banking or corporate mail server.
+  - The sender used Gmail.com infrastructure while impersonating a financial-related notification, which is suspicious
+    behavior commonly seen in phishing campaigns.
 - Suspicious attachment:
 
   <img width="360" height="73" alt="image" src="https://github.com/user-attachments/assets/868a8189-83a7-4b25-bf0e-4397d69cc75a" />
@@ -62,7 +64,7 @@ Protocol: 4793122145117905827; 05:59:01 PM
 ### URL Analysis
 - The email has no URLs.
 
-### Attachments Analysi
+### Attachments Analysis
 <img width="978" height="37" alt="image" src="https://github.com/user-attachments/assets/d35256b2-5ac7-49ca-bab9-4b2db0635545" />
 
 <img width="954" height="746" alt="image" src="https://github.com/user-attachments/assets/d09f8f6f-f822-4251-9500-481d74e40c69" />
